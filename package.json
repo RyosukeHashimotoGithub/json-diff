@@ -1,0 +1,17 @@
+{
+  "name": "typescript-project-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -p code",
+    "watch": "tsc -p code -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryosuke Hashimoto",
+  "license": "MIT",
+  "devDependencies": {
+    "esm": "*",
+    "typescript": "*"
+  }
+}
