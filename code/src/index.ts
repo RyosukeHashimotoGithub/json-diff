@@ -1,14 +1,13 @@
-const input: string = "{\"key: \"value\"}";
-
-const isJson = (str: string) => {
+const tryCatch = (f: any) => {
   try {
-    const json = JSON.parse(str);
-    console.log(json);
+    return f();
   } catch (e) {
-    console.log(e);
-    return false;
+    return [e.name, e.message];
   }
-  return true;
-};
+}
 
-isJson(input);
+const input: string = "{\"correct\": \"json\"}";
+// const input: string = "{bad json}";
+const isJson = () => JSON.parse(input);
+
+console.log(tryCatch(isJson));
